@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: rbk_ticket
+    description: "Number of rebooking in different order statuses and refername_ibu"
+    columns:
+      - name: orderstatus
+        description: "order statuses"
+        tests:
+          - accepted_values:
+              values:
+                - "S"
+                - "P"
+                - "R"
+      - name: cnt
+        description: "number of rebooking"
